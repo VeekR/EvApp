@@ -1,9 +1,14 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 namespace EvApp.Server.Data.Models
 {
-    public class brand
+    [Table("Countries")]
+    [Index(nameof(BrandName))]
+    [Index(nameof(Efficeincy))]
+    [Index(nameof(PowerTrain))]
+    public class Brand
     {
         #region Properties
         /// <summary>

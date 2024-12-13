@@ -2,8 +2,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.Metrics;
+using Microsoft.EntityFrameworkCore;
 namespace EvApp.Server.Data.Models
 {
+    [Table("Models")]
+    [Index(nameof(ModelName))]
+    [Index(nameof(TopSpeed))]
+    [Index(nameof(MileRange))]
     public class Model
     {
         #region Properties
@@ -37,7 +42,9 @@ namespace EvApp.Server.Data.Models
         /// <summary>
         /// The country related to this city.
         /// </summary>
-        public brand? brand { get; set; }
+        public Brand? brand { get; set; }
         #endregion
-    }
+
+       
+    } 
 }
