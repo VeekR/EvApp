@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: false,
   
   templateUrl: './nav-menu.component.html',
-  styleUrl: './nav-menu.component.css'
+  styleUrl: './nav-menu.component.scss'
 })
 export class NavMenuComponent {
 
